@@ -13,7 +13,7 @@
 
 		<div ng-switch on="option">
 			<div ng-switch-when="register" class="reveal-animation"
-				style="padding-right: 25px">
+				style="padding-right: 25px; overflow: hidden; height: 100%">
 				<h2 style="margin-left: 35px; margin-top: 40px">{{'welcome.register.title'|i18n}}</h2>
 				<div style="margin-left: 35px; margin-top: 35px">
 					<form ng-submit="newUser()">
@@ -43,7 +43,7 @@
 							</div>
 
 							<div
-								style="height: 50px; margin-top: 10px; color: #D3AF7B; line-height: 14px; font-size: 85%;">
+								style="min-height: 50px; height: auto; margin-top: 10px; color: #D3AF7B; line-height: 14px; font-size: 85%;">
 								<div class="animate-show" ng-show="register.fault.on">
 									<i class="icon-remove"
 										style="float: left; background-color: rgb(255, 82, 0); margin-right: 5px; margin-top: -1px"></i>
@@ -65,11 +65,13 @@
 								</div>
 							</div>
 
-							<button class="btn btn-reg" style="width: 50%" type="submit">
+							<button class="btn btn-reg"
+								style="width: 50%; position: absolute; bottom: 70px"
+								type="submit">
 								<strong>{{'welcome.register.button'|i18n}}</strong>
 							</button>
 							<p
-								style="display: block; margin-top: 15px; color: #D3AF7B; line-height: 14px; font-size: 85%;">
+								style="display: block; margin-top: 15px; color: #D3AF7B; line-height: 14px; font-size: 85%; position: absolute; bottom: 0px; margin-bottom: 25px; padding-right: 25px">
 								{{'welcome.register.ad'|i18n}}<a href="#/legal"
 									style="color: #D3AF7B;"> {{'welcome.register.terms'|i18n}}</a>
 							</p>

@@ -30,7 +30,7 @@
             },
             "luiza": {
                 "title": "Variable stars",
-                "desc": "View the light curve of a selected star."
+                "desc": "Hunt for variable stars in the data from wide field sky observations."
             }
         }
     },

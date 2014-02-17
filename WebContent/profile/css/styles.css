@@ -19,3 +19,16 @@
 	padding-left: 320px;
 	background-color: #0F0F0F;
 }
+
+#oc-button .caret {
+	border-top: 1px solid silver;
+}
+
+#oc-button.btn .btn-info .caret {
+	margin-top: 8px;
+	margin-left: 3px;
+}
+
+.btn-group.open .btn-info.dropdown-toggle {
+	background-color: #FF9900;
+}

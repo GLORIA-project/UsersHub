@@ -32,29 +32,29 @@
                     "desc": "Sélectionnez des étoiles et observez leur courbe de lumière."
                 }
             }
-        },
-        "widgets": {
-            "loading": "Chargement",
-            "excl": "Ai!",
-            "noimg": "Pas d'image trouvée",
-            "community": {
-                "title": "Imagespubliques",
-                "slide": {
-                    "title": "Image@{p1}@",
-                    "date": "@{p1}@"
-                }
-            },
-            "user": {
-                "title": "Vosimages",
-                "slide": {
-                    "title": "Image@{p1}@",
-                    "date": "@{p1}@"
-                }
-            },
-            "telescopes": {
-                "title": "Nostélescopes",
-                "ad": "Uneplusgrandecarte"
+        }
+    },
+    "widgets": {
+        "loading": "Chargement",
+        "excl": "Ai!",
+        "noimg": "Pas d'image trouvée",
+        "community": {
+            "title": "Imagespubliques",
+            "slide": {
+                "title": "Image @{p1}@",
+                "date": "@{p1}@"
             }
+        },
+        "user": {
+            "title": "Vosimages",
+            "slide": {
+                "title": "Image @{p1}@",
+                "date": "@{p1}@"
+            }
+        },
+        "telescopes": {
+            "title": "Nostélescopes",
+            "ad": "Uneplusgrandecarte"
         }
     }
 }

@@ -1,33 +1,33 @@
 {
-	"header": "Your profile",
-	"intro": "This is the place where you can view and manage your personal information. Shortly we'll show data about your contribution in GLORIA and the rewards you get. Meanwhile, we are keeping track of your activity so that your achievement can be recognised.",
+	"header": "Ваш профиль",
+	"intro": "Здесь вы можете просматривать и менять информацию о себе. В ближайшее время тут появится информация о вашем вкладе в проект GLORIA и о полученных вами наградах. А пока мы собираем информацию о вашей активности, чтобы отслеживать ваши достижения.",
 	"update": {
 		"placeholders": {
-			"password": "New password",
-			"rep-pass": "Repeat new password"
+			"password": "Новый пароль",
+			"rep-pass": "Повторите новый пароль"
 		},
-		"password-res": "At least 6 characters containing upper and lowercase letters and at least a number.",
+		"password-res": "Как минимум 6 символов, включая буквы в нижнем и верхнем регистре, а также как минимум одна цифра.",
 		"errors": {
-            "server": "Server connection error. Sorry for the inconvenience.",
-            "unknown": "Unknown error",
-            "password": "Password is not valid",
-            "match": "Passwords do not match"
+            "server": "Ошибка соединения с сервером. Приносим извенения за неудобства.",
+            "unknown": "Неизвестная ошибка",
+            "password": "Неправильный пароль",
+            "match": "Пароли не совпадают"
         },
-        "success": "Request received! Check your inbox to activate your new password.",
-         "button": "Change",
-         "title": "Password"
+        "success": "Запрос получен! Проверьте вашу почту для активации нового пароля.",
+         "button": "Изменить",
+         "title": "Пароль"
 	},
 	"avatar": {
-		"title": "Avatar",
-		"ad": "GLORIA relies on Gravatar.com to recover your avatar or to assign one if you have not created it. Click on the image if you want to change it."
+		"title": "Аватарка",
+		"ad": "GLORIA пользуется сервисом Gravatar.com, чтобы найти вашу аватарку, или создать новую, если её ещё нет. Нажмите на изображение, если хотите его поменять."
 	},
 	"about": {
-		"title": "About you",
+		"title": "О вас",
 		"ocupation": {
-			"title": "What do you do?",
-			"student": "I am a student",
-			"scientist": "I am a scientist",
-			"other": "I do other things"
+			"title": "Чем вы занимаетесь?",
+			"student": "Я студент",
+			"scientist": "Я учёный",
+			"other": "Я занимаюсь чем-то другим"
 		}
 	}
 }

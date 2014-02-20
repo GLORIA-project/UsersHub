@@ -29,6 +29,24 @@
 				}
 			},			
 			{
+				"type": "divider",
+				"visibility": "ADMIN"	
+			},
+			{
+				"type": "header",
+				"text": "navbar.titles.experiments.online.header",
+				"visibility": "ADMIN"			
+			},
+			{
+				"type": "link",
+				"text": "navbar.titles.experiments.online.scheduler",
+				"visibility": "ADMIN",
+				"href": {
+					"app": "scheduler",
+					"path": "/"
+				}
+			},			
+			{
 				"type": "divider"	
 			},
 			{
@@ -59,7 +77,7 @@
 		]	
 	},
 	"images": {
-		"text": "navbar.titles.images.header",
+		"text": "navbar.titles.images.header",		
 		"href": {
 			"path": "/images"
 		}

@@ -6,7 +6,8 @@
             "online": {
                 "header": "ОНЛАЙН",
                 "solar": "Солнечный",
-                "night": "Ночной"
+                "night": "Ночной",
+                "scheduler": "Scheduler"
             },
             "reservations": {
                 "header": "БРОНИРОВАНИЯ",

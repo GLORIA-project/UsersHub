@@ -6,7 +6,8 @@
             "online": {
                 "header": "ONLINE",
                 "solar": "Dzienne",
-                "night": "Nocne"
+                "night": "Nocne",
+                "scheduler": "Scheduler"
             },
             "reservations": {
                 "header": "REZERWACJA",

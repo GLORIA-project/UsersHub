@@ -28,6 +28,9 @@
 			"student": "I am a student",
 			"scientist": "I am a scientist",
 			"other": "I do other things"
+		},
+		"karma": {
+			"title": "Your Karma"			
 		}
 	}
 }

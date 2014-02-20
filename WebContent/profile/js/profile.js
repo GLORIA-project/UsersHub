@@ -41,9 +41,21 @@ function ProfileController($scope, $gloriaAPI, $timeout, $gloriaLocale, Login,
 
 	$gloriaAPI.getUserInformation(function(data) {
 		$scope.about.ocupation = 'profile.about.ocupation.' + data.ocupation;
-		$scope.about.infoLoaded = true;
-	}, function(error) {
 
+		$gloriaAPI.getUserKarma(data.name, function(karmaData) {
+			if (karmaData != undefined && karmaData != '') {
+				$scope.about.karma = karmaData.karma[0];
+				console.log(karmaData);				
+			} else {
+				$scope.about.karma = "?";
+			}
+			$scope.about.infoLoaded = true;
+		}, function(error) {
+			$scope.about.infoLoaded = true;
+		});
+
+	}, function(error) {
+		$scope.about.infoLoaded = true;
 	});
 
 	$scope.updatePassword = function() {

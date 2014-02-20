@@ -28,6 +28,9 @@
 			"student": "Soy estudiante",
 			"scientist": "Soy científico",
 			"other": "Hago otras cosas"
+		},
+		"karma": {
+			"title": "Tu Karma"			
 		}
 	}
 }

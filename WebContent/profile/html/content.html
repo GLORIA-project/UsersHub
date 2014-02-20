@@ -1,5 +1,5 @@
 <link href="profile/css/styles.css" rel="stylesheet"></link>
-<div ng-controller="ProfileController" ng-show="ready">
+<div ng-controller="ProfileController" ng-show="ready && about.infoLoaded">
 	<div class="page-header" style="border: none; margin-bottom: 10px">
 		<div class="row" style="margin-bottom: 0px">
 			<h2 style="margin-left: 18px">{{'profile.header' | i18n}}</h2>
@@ -60,17 +60,26 @@
 			</fieldset>
 		</form>
 	</div>
-	<div style="margin-left: 0px" class="span6">
+	<div style="margin-left: 0px">
 		<h3>{{'profile.about.title'|i18n}}</h3>
-		<h5>{{'profile.about.ocupation.title'|i18n}}</h5>
-		<div class="btn-group animate-show" ng-show="about.infoLoaded">
-			<button id="oc-button" class="btn btn-info dropdown-toggle"
-				data-toggle="dropdown">{{about.ocupation | i18n}}</button>
-			<ul class="dropdown-menu">
-				<li ng-repeat="oc in about.langOcupations"
-					ng-click="about.selectOcupation($index)"><a
-					style="cursor: pointer">{{oc |i18n}}</a></li>
-			</ul>
+		<div style="margin-left: 0px" class="span3" ng-show="about.infoLoaded">
+			<h5>{{'profile.about.ocupation.title'|i18n}}</h5>
+			<div class="btn-group animate-show">
+				<button id="oc-button" class="btn btn-info dropdown-toggle"
+					data-toggle="dropdown">{{about.ocupation | i18n}}</button>
+				<ul class="dropdown-menu">
+					<li ng-repeat="oc in about.langOcupations"
+						ng-click="about.selectOcupation($index)"><a
+						style="cursor: pointer">{{oc |i18n}}</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="span3">
+			<h5>{{'profile.about.karma.title'|i18n}}</h5>
+			<div class="btn-group animate-show">
+				<button id="oc-button" class="btn btn-info" data-toggle="dropdown">{{about.karma}}</button>
+			</div>
 		</div>
 	</div>
+
 </div>

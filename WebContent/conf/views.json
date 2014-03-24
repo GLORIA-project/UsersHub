@@ -2,13 +2,13 @@
 	"main": {
 		"type": "main",
 		"path": "/",
-		"html": "home/html/content.html",
-		"js": ["home/js/main.js", "home/js/jquery.barousel.js"]		
+		"html": "main/html/content.html",
+		"js": ["main/js/main.js", "main/js/jquery.barousel.js"]		
 	},
 	"images": {
 		"path": "/images",
 		"html": "images/html/content.html",
-		"js": ["images/js/images.js", "home/js/jquery.barousel.js", "images/js/datepicker.js"]		
+		"js": ["images/js/images.js", "main/js/jquery.barousel.js", "images/js/datepicker.js", "images/js/fits.js"]		
 	},
 	"welcome": {
 		"visibility": "only-public",

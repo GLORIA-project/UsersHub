@@ -79,4 +79,12 @@ function CarouselCtrl($scope, $gloriaAPI, $timeout, $gloriaLocale) {
 
 		$scope.loading = false;
 	};
+	
+	$scope.callback = function() {
+		//var bitpix = header.get('BITPIX');
+		//console.log(bitpix);
+	};
+	
+	var f = new astro.FITS('images/img/image0.fits', $scope.callback);	
+		
 }

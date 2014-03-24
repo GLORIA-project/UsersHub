@@ -129,7 +129,7 @@ function HomePageController($scope, $gloriaAPI, $timeout, $gloriaLocale) {
 	
 	$scope.ready = false;
 	
-	$gloriaLocale.loadResource('home/lang', 'home', function() {
+	$gloriaLocale.loadResource('main/lang', 'home', function() {
 		$scope.ready = true;
 	});
 }

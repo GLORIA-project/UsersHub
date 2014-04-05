@@ -1,5 +1,5 @@
-<link href="images/css/styles.css" rel="stylesheet"></link>
 <link href="main/css/barousel.css" rel="stylesheet"></link>
+<link href="images/css/styles.css" rel="stylesheet"></link>
 <div ng-controller="CarouselCtrl" ng-show="ready">
 	<div class="page-header" style="border: none; margin-bottom: 10px">
 		<div class="row" style="margin-bottom: 0px">
@@ -21,15 +21,17 @@
 			</div>
 		</div>
 		<div class="span7">
-			<div class="animate-show"
-				ng-show="!loading && slides.length > 0">
-				<div id="any_id" class="barousel">
-					<div class="barousel_image image">
-
-						<img ng-repeat="slide in slides" src="{{slide.image}}" alt=""
-							ng-class="{'default': $first}" class="">
+			<div class="animate-show" ng-show="!loading && slides.length > 0">
+				<div id="carousel" class="barousel"
+					style="overflow: hidden; position: relative">
+					<div class="barousel_image image" style="z-index: -100">
+						<img ng-repeat="slide in slides"
+							src="{{slide.image}}" alt="" ng-class="{'default': $first}"
+							class="">
 					</div>
-					<div class="barousel_content" style="height: 90px">
+					<div class="
+							barousel_content"
+						style="height: 110px; z-index: 1000">
 						<div ng-repeat="slide in slides" ng-class="{'default': $first}">
 							<p class="header">{{'images.slide.title' | i18n:slide.rt}}</p>
 							<p>{{'images.slide.date' | i18n:(slide.date | utc |
@@ -37,10 +39,15 @@
 							<p>
 								<b style="cursor: default" class="label label-g">{{slide.id}}</b>
 							</p>
+							<p id="buttons">
+								<a class="btn btn-primary image-btn" download="image.jpg"
+									ng-href="{{slide.image + '&download=true'}}">JPEG</a> <a
+									class="btn btn-warning image-btn" download="image.fits"
+									ng-href="{{slide.fits + '&download=true'}}">FITS</a>
+							</p>
 						</div>
 					</div>
 					<div class="barousel_nav"></div>
-
 				</div>
 			</div>
 			<div class="animate-show" ng-show="!loading && slides.length == 0"

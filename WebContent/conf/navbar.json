@@ -83,7 +83,14 @@
 		}
 			
 	},
-	"profile": {
+	"telescopes": {
+		"text": "navbar.titles.telescopes.header",		
+		"href": {
+			"app": "telescopes",
+			"path": "/"
+		},
+		"visibility": "ADMIN"
+	},"profile": {
 		"text": "navbar.titles.profile.header",
 		"href": {
 			"path": "/profile"

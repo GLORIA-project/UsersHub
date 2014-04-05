@@ -24,6 +24,9 @@
         "images": {
             "header": "Zdjęcia"
         },
+        "telescopes": {
+            "header": "Telescopes"
+        },
         "profile": {
             "header": "Profil"
         },

@@ -8,7 +8,7 @@
 	"images": {
 		"path": "/images",
 		"html": "images/html/content.html",
-		"js": ["images/js/images.js", "main/js/jquery.barousel.js", "images/js/datepicker.js", "images/js/fits.js"]		
+		"js": ["images/js/images.js", "main/js/jquery.barousel.js", "images/js/datepicker.js", "images/js/jquery.elevatezoom.js"]		
 	},
 	"welcome": {
 		"visibility": "only-public",

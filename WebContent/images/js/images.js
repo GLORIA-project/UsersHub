@@ -1,57 +1,90 @@
 'use strict';
 
-function loadImages(scope, $gloriaAPI, date, timeout) {
-	scope.slides = [];
+/*toolbox.lazy.directive('ngElevateZoom', function() {
+	return {
+		restrict : 'A',
+		link : function(scope, element, attrs) {
+			console.log("Linking");
 
-	console.log("loading images");
+			// Will watch for changes on the attribute
+			attrs.$observe('zoomImage', function() {
+				linkElevateZoom();
+			});
 
-	if (date != null) {
+			attrs.$observe('ng-elevate-zoom', function() {
+				linkElevateZoom();
+			});
 
-		$gloriaAPI.getImagesByDate(date.getFullYear(), date.getMonth() + 1, date
-				.getDate(), function(imgraw) {
-			if (imgraw != null && imgraw != 'null' && imgraw != '') {
-				var index = 0;
-
-				imgraw.forEach(function(element) {
-
-					var slide = {
-						image : element.jpg,
-						id : element.id,
-						date : element.creationDate, //new Date(element.creationDate).toUTCString(),
-						rt : element.rt
-					};
-
-					if (index == 0) {
-						slide.active = true;
-					} else {
-						slide.active = false;
-					}
-
-					scope.addSlide(slide);
-
-					index++;
+			function linkElevateZoom() {
+				if (attrs.ngElevateZoom == 'inactive')
+					return;
+				// Check if its not empty
+				if (!attrs.zoomImage)
+					return;
+				element.attr('data-zoom-image', attrs.zoomImage);
+				$(element).elevateZoom({
+					zoomType : "lens",
+					lensShape : "round",
+					lensSize : 150
 				});
 			}
 
-			scope.timer = timeout(scope.loadCarousel, 500);
+			linkElevateZoom();
+		}
+	};
+});*/
 
-		}, function(data, status) {
-			console.log('error', data, status);
-			scope.loading = false;
-		}, function() {
-			scope.$emit('unauthorized');
-		});
+function loadImages(scope, $gloriaAPI, date, timeout) {
+	scope.slides = [];
+
+	if (date != null) {
+
+		$gloriaAPI.getImagesByDate(date.getFullYear(), date.getMonth() + 1,
+				date.getDate(), function(imgraw) {
+					if (imgraw != null && imgraw != 'null' && imgraw != '') {
+						var index = 0;
+
+						imgraw.forEach(function(element) {
+
+							var slide = {
+								image : element.jpg,
+								fits : element.fits,
+								id : element.id,
+								date : element.creationDate,
+								rt : element.rt
+							};
+
+							if (index == 0) {
+								slide.active = true;
+							} else {
+								slide.active = false;
+							}
+
+							scope.addSlide(slide);
+
+							index++;
+						});
+					}
+
+					scope.timer = timeout(scope.loadCarousel, 500);
+
+				}, function(data, status) {
+					console.log('error', data, status);
+					scope.loading = false;
+				}, function() {
+					scope.$emit('unauthorized');
+				});
 	}
 }
 
 function CarouselCtrl($scope, $gloriaAPI, $timeout, $gloriaLocale) {
-	
+
 	$scope.ready = false;
-	
+
 	$gloriaLocale.loadResource('images/lang', 'images', function() {
 		$scope.ready = true;
 	});
-	
+
 	$scope.myInterval = 1000;
 	$scope.slides = [];
 	$scope.loading = false;
@@ -70,7 +103,7 @@ function CarouselCtrl($scope, $gloriaAPI, $timeout, $gloriaLocale) {
 	};
 
 	$scope.loadCarousel = function() {
-		$('#any_id').barousel({
+		$('#carousel').barousel({
 			navType : 2,
 			manualCarousel : 1,
 			slideDuration : 3000,
@@ -79,12 +112,4 @@ function CarouselCtrl($scope, $gloriaAPI, $timeout, $gloriaLocale) {
 
 		$scope.loading = false;
 	};
-	
-	$scope.callback = function() {
-		//var bitpix = header.get('BITPIX');
-		//console.log(bitpix);
-	};
-	
-	var f = new astro.FITS('images/img/image0.fits', $scope.callback);	
-		
 }

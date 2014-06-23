@@ -14,12 +14,12 @@
 			"password": "Password",
 			"rep-pass": "Ripeti la password"
 		},
-		"password-res": "Almeno 6 caratteri contenenti lettere o numeri",
+		"password-res": "Almeno 6 caratteri contenenti lettere, minuscole E maiuscole, e numeri",
 		"button": "Registazione",
 		"ad": "Facendo click su questo pulsante accettate",
 		"terms": "i termini e le condizioni di accesso a GLORIA",
 		"errors": {
-			"server": "Errore di connessione al server. Ci spiace per l'inconveniente",
+			"server": "Errore di connessione al server. Ci dispiace per l'inconveniente",
 			"email": "L'email non è corretto",
 			"unknown": "Errore sconosciuto",
 			"password": "Password non valida",

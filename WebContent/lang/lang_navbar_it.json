@@ -7,7 +7,7 @@
                 "header": "ONLINE",
                 "solar": "Solare",
                 "night": "Notturno",
-                "scheduler": "Scheduler"
+                "scheduler": "Schedulatore"
             },
             "reservations": {
                 "header": "Prenotazioni",
@@ -25,13 +25,13 @@
             "header": "Immagini"
         },
         "telescopes": {
-            "header": "Telescopes"
+            "header": "Telescopi"
         },
         "profile": {
-            "header": "Profile"
+            "header": "Profilo"
         },
         "issues": {
-            "header": "Issues"
+            "header": "Contribuiti"
         }
     }
 }

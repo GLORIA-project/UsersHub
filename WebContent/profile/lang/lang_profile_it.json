@@ -6,7 +6,7 @@
 			"password": "Nuova password",
 			"rep-pass": "Ripeti la nuova password"
 		},
-		"password-res": "Almeno 6 caratteri contenenti lettere minuscole, maiuscole e almeno un numero.",
+		"password-res": "Almeno 6 caratteri contenenti lettere, minuscole E maiuscole, e almeno un numero.",
 		"errors": {
             "server": "Errore di connessione al server. Spiacenti dell'inconveniente.",
             "unknown": "Errore sconosciuto",

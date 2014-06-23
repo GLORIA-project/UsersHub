@@ -21,7 +21,7 @@
 				"desc": "Guarda il cielo durante la notte. Stelle, galassie ed asteroidi stanno aspettando."
 			},
 			"pspace": {
-				"title": "Personal space",
+				"title": "Personal Space",
 				"desc": "Seleziona un evento per localizzare la regione di cielo che in quel preciso momento e luogo era sopra la tua testa." 
 			},
 			"wolf": {
@@ -29,8 +29,8 @@
 				"desc": "Analizza le macchie solari con il tuo Adroid e contribuisci alla misura dell'attività solare."
 			},
             "luiza": {
-                "title": "Variable stars",
-                "desc": "View the light curve of a selected star."
+                "title": "Stelle Variabili",
+                "desc": "Guarda la curva di luce di una stella scelta da te."
             }
 		}
 	},
